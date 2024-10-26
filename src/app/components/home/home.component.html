@@ -1,0 +1,23 @@
+<div
+[ngStyle]="{ 'background-image': 'url(' + fondoUrl + ')'}" class="foto">
+ 
+    <div style="padding-left: 20%;padding-bottom: 50%">
+        <app-buttom-map ></app-buttom-map>
+    </div>
+    @if(hidden[0]){
+    <div  [ngStyle]="{ 'padding-left': fleft[0],'padding-bottom': fbot[0]}" style=" align-self: flex-end;  position: absolute;">
+        <button [ngStyle]="{'transform': 'rotate('+ rotacion[0] +')'}" class="arrow-button" (click)="flecha(0)"></button>
+    </div>
+    }
+    @if(hidden[1]){
+    <div  [ngStyle]="{ 'padding-left': fleft[1],'padding-bottom': fbot[1] }" style=" align-self: flex-end;  position: absolute;">
+        <button [ngStyle]="{'transform': 'rotate('+ rotacion[1] +')'}" class="arrow-button" (click)="flecha(1)"></button>
+    </div>
+    }
+    @if(hidden[2]){
+    <div  [ngStyle]="{ 'padding-left': fleft[2],'padding-bottom': fbot[2] }" style=" align-self: flex-end;  position: absolute;">
+        <button [ngStyle]="{'transform': 'rotate('+ rotacion[2] +')'}" class="arrow-button" (click)="flecha(2)"></button>
+    </div>
+    }
+    
+</div>
